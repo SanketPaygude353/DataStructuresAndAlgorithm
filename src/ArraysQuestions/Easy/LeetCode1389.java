@@ -1,4 +1,4 @@
-package ArraysQuestions;
+package ArraysQuestions.Easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

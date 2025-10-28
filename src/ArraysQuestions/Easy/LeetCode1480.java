@@ -1,4 +1,4 @@
-package ArraysQuestions;
+package ArraysQuestions.Easy;
 //1480.Running sum of 1D array
 //Input: nums = [1,2,3,4]
 //Output: [1,3,6,10]

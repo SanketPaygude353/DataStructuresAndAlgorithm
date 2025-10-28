@@ -1,4 +1,4 @@
-package ArraysQuestions;
+package ArraysQuestions.Easy;
 
 //1929. Concatenation of the array
 //Input: nums = [1,2,1]

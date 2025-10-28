@@ -1,4 +1,4 @@
-package ArraysQuestions;
+package ArraysQuestions.Easy;
 
 //1672. Richest customer wealth
 //Input: accounts = [[1,2,3],[3,2,1]]

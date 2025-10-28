@@ -1,4 +1,4 @@
-package ArraysQuestions;
+package ArraysQuestions.Easy;
 
 //How Many Numbers Are Smaller Than the Current Number
 //Input: nums = [6,5,4,8]
