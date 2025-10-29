@@ -302,9 +302,225 @@ public static void pattern15(int n){
         }
 
 }
-    public static void main(String[] args) {
 
-        pattern15(5);
+//16.
+//    A
+//    BB
+//    CCC
+//    DDDD
+//    EEEEE
+
+    public static void pattern16(int n)
+    {
+        for(char i = 'A'; i < 'A'+n; i++)
+        {
+            for(char j = 'A'; j<=i; j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
     }
 
+//    17.
+//        A
+//       ABA
+//      ABCBA
+//     ABCDCBA
+//    ABCDEDCBA
+
+
+    public static void pattern17(int n){
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j =1; j <= n-i; j++){
+                System.out.print(" ");
+            }
+            char ch='A';
+            for(int j = 1; j <= i*2-1; j++){
+                System.out.print(ch);
+                if(j<i)ch++;
+                else ch--;
+            }
+
+            for(int j =1; j <= n-i; j++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+//    18.
+//    E
+//    D E
+//    C D E
+//    B C D E
+//    A B C D E
+
+
+    public static void pattern18(int n){
+
+        for (int i = 1; i <= n; i++) {
+            char ch= (char)('A'+n-i);
+            for (int j = 1; j <= i; j++) {
+                System.out.print(ch);
+                ch++;
+            }
+            System.out.println();
+        }
+    }
+
+    //19.
+//            **********
+//            ****  ****
+//            ***    ***
+//            **      **
+//            *        *
+//            *        *
+//            **      **
+//            ***    ***
+//            ****  ****
+//            **********
+
+    public static void pattern19(int n){
+
+        for (int i = 0; i < n; i++) {
+            for(int j = 0; j < n-i; j++){
+                System.out.print("*");
+            }
+            for (int j = 1; j <=i*2; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < n-i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < n; i++) {
+
+            for(int j = 0; j <= i; j++){
+                System.out.print("*");
+            }
+
+            for(int j = 0; j < (n-i-1)*2 ; j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j = 0; j <= i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    //20.
+//            *        *
+//            **      **
+//            ***    ***
+//            ****  ****
+//            **********
+//            ****  ****
+//            ***    ***
+//            **      **
+//            *        *
+
+    public static void pattern20(int n){
+
+        for (int i = 1; i <= n ; i++) {
+
+            for(int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
+            for(int j = 1; j <= 2*n-(i*2); j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i = 1; i <= n-1; i++)
+        {
+            for(int j = 1; j <= n-i; j++)
+            {
+                System.out.print("*");
+            }
+
+            for (int j = 1; j <= i*2; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j =1; j <= n-i; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+//    21.
+//            *****
+//            *   *
+//            *   *
+//            *   *
+//            *****
+
+    public static void pattern21(int n){
+
+        for(int i = 1; i <= n; i++){
+            if(i==1 || i==n)
+            {
+                for (int j = 0; j < n; j++) {
+                    System.out.print("*");
+                }
+            }
+
+            else {
+                for(int j = 1; j <= n ;j++)
+                {
+                    if(j==1 || j==n)
+                    {
+                        System.out.print("*");
+                    }
+                    else System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+
+    //22.
+//            5 5 5 5 5 5 5 5 5
+//            5 4 4 4 4 4 4 4 5
+//            5 4 3 3 3 3 3 4 5
+//            5 4 3 2 2 2 3 4 5
+//            5 4 3 2 1 2 3 4 5
+//            5 4 3 2 2 2 3 4 5
+//            5 4 3 3 3 3 3 4 5
+//            5 4 4 4 4 4 4 4 5
+//            5 5 5 5 5 5 5 5 5
+    public static void pattern22(int n){
+
+        for (int i = 0; i < 2 * n - 1; i++) {
+            for (int j = 0; j < 2 * n - 1; j++) {
+
+                int top = i;
+                int left = j;
+                int right = (2 * n - 2) - j;
+                int bottom = (2 * n - 2) - i;
+                System.out.print((n - Math.min(Math.min(top, bottom), Math.min(left, right))) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        pattern22(5);
+    }
 }
